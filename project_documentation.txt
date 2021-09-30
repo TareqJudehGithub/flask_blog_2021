@@ -1,0 +1,66 @@
+- Create project folder flask_blog
+- inside, created a new virtual environment (venv)
+    $ python -m venv venv
+
+- Activate venv
+    $ source venv/Scripts/activate
+    note: to deactivate venv:  $ deactivate
+
+- Install Flask 
+    $ pip Install flask
+    To check, run:
+      $ pip freeze
+      >>>
+        click==8.0.1
+        colorama==0.4.4
+        Flask==2.0.1
+        itsdangerous==2.0.1
+        Jinja2==3.0.1
+        MarkupSafe==2.0.1
+        Werkzeug==2.0.1
+
+- created server.py file, which will serve as the Flask main server.
+
+- app = Flask(__name__)
+    app instance Helps Flask finds all our files and folders.
+
+- Add server.py to env
+  $ export FLASK_APP=server.py
+- Automatically save changes to flask server
+  $ export FLASK_ENV=development
+
+- flask library
+  render_template() redirects Flask server to a specified html page
+    render_template("index.html")
+
+- Jinja2 template
+  In server.py We can pass variables to html files in many ways:
+    1. - pass variable to the function it self as a parameter
+    def greet_user(username):
+      render_template("index.html", user=username)
+    
+    - - creating new variables:
+    def greet_user(username):
+      name = "john smith"
+      render_template("index.html", name=name)
+    
+  2. In html files
+    <h1>Hello, {{ name | title }}</h1>
+
+    - Jinja2 filters: 
+        after the variable | we can add filters like title, capitalize, upper, lower,
+        trim, striptags and safe.
+        * safe tag renders html, while striptags removes html tags from text.
+
+        full list of filters can be found under List of Builtin Filters in
+        https://jinja.palletsprojects.com/en/3.0.x/templates/#id11
+        from Jinja2 official documentation.
+
+    - We could also use conditionals, loops..
+    {% if (condition)%}
+    {% endif %}
+  
+
+  Fixing 404 Error - Page not found
+    
+

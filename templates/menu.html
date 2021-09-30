@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+  </head>
+  <body>
+    <h1>Pizza types</h1>
+    <p>Using for loop statement</p>
+    {% for item in pizza %}
+    <ul>
+      <li>{{ item | capitalize }}</li>
+    </ul>
+    {% endfor %}
+
+    <p>First item in the menu list: {{ pizza.0 | capitalize }}</p>
+    <p>Using for and if statement</p>
+
+    <p>
+      {% for i in pizza %}
+      {% if "veggie" == i %}
+    <h5> {{return }} We have {{ i | capitalize }} in the menu.</h5>
+    {%else %}
+    <h5>We don't have {{ i | capitalize }}</h5>
+    {% endif %}
+    {% endfor %}
+    </p>
+
+    <h4>Conditional</h4>
+
+    <p>
+      {% if "veggie" in pizza %}
+      {{ True }}
+      {% else %}
+      {{ False }}
+      {% endif %}
+    </p>
+
+
+
+  </body>
+</html>
