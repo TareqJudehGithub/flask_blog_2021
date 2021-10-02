@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page not found</title>
   </head>
-  <h4>Page did not load with the following error:</h4>
-  <p>{{ err }}</p>
   <body>
-
+    {% extends "base.html" %}
+    {% block content %}
+    <h4>Page did not load with the following error:</h4>
+    <p>{{ err }}</p>
+    {% endblock %}
   </body>
 </html>

@@ -61,6 +61,13 @@
     {% endif %}
   
 
-  Fixing 404 Error - Page not found
+  - Fixing 404 Error - Page not found in Flask.
+
+  - WTforms
+    Installation
+    $ pip install flaskWTForms
+
+    WTForms CRF token
+
     
 

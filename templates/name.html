@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% extends 'base.html' %}
+    {% block head %}
+    {{ super() }}
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <h1>Form page!</h1>
+    <h2>What's our name?</h2>
+    {% if name %}
+    <p>Hello, {{ name | title }} </p>
+    {%else %}
+
+    <form action="" method="POST">
+
+      {{ form.hidden_tag() }}
+      <!-- create crf token -->
+      <div class="mb-3">
+        <label>{{ form.name.label(class="form-label")}}</label>
+        <p>{{form.name(class="form-control") }}</p>
+      </div>
+      {{ form.submit(class="btn btn-secondary") }}
+    </form>
+
+    {% endif %}
+    {% endblock %}
+  </body>
+</html>

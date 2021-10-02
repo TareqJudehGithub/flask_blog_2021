@@ -7,6 +7,9 @@
     <title>Pizza</title>
   </head>
   <body>
+    {% extends "base.html" %}
+    {% block content %}
+
     <h1>Pizza types</h1>
     <p>Using for loop statement</p>
     {% for item in pizza %}
@@ -37,8 +40,6 @@
       {{ False }}
       {% endif %}
     </p>
-
-
-
+    {% endblock %}
   </body>
 </html>
